@@ -1,0 +1,17 @@
+    <div class="grid grid-cols-4 gap-4 items-end">
+        <mat-form-field class="col-span-2 w-full">
+            <mat-label>Nome</mat-label>
+            <input matInput value="{{nome}}"/>
+        </mat-form-field>
+
+        <mat-form-field class="col-span-1 w-full">
+            <mat-label>unidade</mat-label>
+            <input matInput value="{{unidade}}"/>
+        </mat-form-field>
+
+        <mat-form-field class="col-span-1 w-full">
+            <mat-label>R$</mat-label>
+             <span matSuffix>/{{unidade}}</span>
+            <input matInput />
+        </mat-form-field>
+    </div>

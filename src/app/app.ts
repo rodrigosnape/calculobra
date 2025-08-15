@@ -6,11 +6,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MedidasComponent } from './components/medidas/medidas.component';
 import { MateriaisComponent } from './components/materiais/materiais.component';
 import { ProfissionaisComponent } from './components/profissionais/profissionais.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
+    MatButtonModule,
     MedidasComponent, MateriaisComponent, ProfissionaisComponent
   ],
   templateUrl: './app.html',
