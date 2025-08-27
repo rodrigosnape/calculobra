@@ -1,4 +1,4 @@
-    <div class="grid grid-cols-4 gap-4 items-end">
+<!--     <div class="grid grid-cols-4 gap-4 items-end">
         <mat-form-field class="col-span-2 w-full">
             <mat-label>Nome</mat-label>
             <input matInput value="{{nome}}"/>
@@ -14,4 +14,34 @@
              <span matSuffix>/{{unidade}}</span>
             <input matInput />
         </mat-form-field>
-    </div>
+    </div> -->
+<div class="grid grid-cols-4 gap-4 items-end">
+  <mat-form-field class="col-span-2 w-full">
+    <mat-label>Nome</mat-label>
+    <input
+        #nomeInput
+        matInput
+        [value]="material.nome"
+        (input)="material.nome = nomeInput.value"/>
+  </mat-form-field>
+
+  <mat-form-field class="col-span-1 w-full">
+    <mat-label>Unidade</mat-label>
+    <input
+        #unidadeInput
+        matInput
+        [value]="material.unidade"
+        (input)="material.unidade = unidadeInput.value"/>
+  </mat-form-field>
+
+  <mat-form-field class="col-span-1 w-full">
+    <mat-label>R$</mat-label>
+    <span matSuffix>/{{material.unidade}}</span>
+    <input
+        #valorInput
+        matInput
+        type="number"
+        [value]="material.valor"
+        (input)="material.valor = +valorInput.value"/>
+  </mat-form-field>
+</div>

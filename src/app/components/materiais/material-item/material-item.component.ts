@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { IMaterial } from '../../../services/materiais.service';
 
 @Component({
   selector: 'app-material-item',
@@ -10,7 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
   styleUrl: './material-item.component.scss'
 })
 export class MaterialItemComponent {
-    @Input({required: true}) nome:string = '';
+/*     @Input({required: true}) nome:string = '';
     @Input() unidade: string = 'm²';
-    @Input() valor: number = 0;
+    @Input() valor: number = 0; */
+    @Input({required: true}) material!: IMaterial;
 }
