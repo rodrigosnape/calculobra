@@ -26,8 +26,6 @@ export class MateriaisComponent implements OnInit {
 
     formMateriais!: FormGroup;
 
-    listaMateriais: IMaterial[] = [];
-
     material1 = {
             id: '1',
             nome: 'Porcelanato',

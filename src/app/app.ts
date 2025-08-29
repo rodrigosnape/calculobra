@@ -7,12 +7,14 @@ import { MedidasComponent } from './components/medidas/medidas.component';
 import { MateriaisComponent } from './components/materiais/materiais.component';
 import { ProfissionaisComponent } from './components/profissionais/profissionais.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
     MatButtonModule,
+    MatTabsModule,
     MedidasComponent, MateriaisComponent, ProfissionaisComponent
   ],
   templateUrl: './app.html',

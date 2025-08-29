@@ -1,0 +1,22 @@
+<div [formGroup]="formGroup" class="grid grid-cols-12 gap-4">
+  <mat-form-field class="col-span-7 w-full">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="nome" />
+  </mat-form-field>
+
+  <mat-form-field class="col-span-2 w-full">
+    <mat-label>Categoria</mat-label>
+    <input matInput formControlName="categoria" />
+  </mat-form-field>
+
+  <mat-form-field class="col-span-2 w-full">
+    <mat-label>R$</mat-label>
+    <input matInput type="number" formControlName="valor" />
+  </mat-form-field>
+
+    <div class="col-span-1 flex items-center">
+        <button mat-icon-button color="warn" type="button" (click)="onRemover()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>
