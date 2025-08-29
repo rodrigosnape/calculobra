@@ -1,17 +1,13 @@
 <div class="grid p-5">
     <h2 class="text-2xl pb-4">Materiais</h2>
 
-<!--     @for(material of listaMateriais; track material.id){
-        <app-material-item
-            [nome]="material.nome"
-            [unidade]="material.unidade"
-            [valor]="material.valor">
-        </app-material-item>
-    } -->
-
-    @for(material of listaMateriais; track material.id){
-        <app-material-item [material]="material"></app-material-item>
-    }
+    <form [formGroup]="formMateriais">
+        <div formArrayName="materiais">
+        @for (grupo of materiaisFormArray.controls; track grupo.value.id; let i = $index) {
+            <app-material-item [formGroup]="grupo" (remover)="removerCampo(i)"></app-material-item>
+        }
+        </div>
+    </form>
 
      <div class="flex justify-end gap-2">
         <button matButton="elevated" (click)="adicionarCampo()">Adicionar</button>

@@ -1,18 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { IMaterial } from '../../../services/materiais.service';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-material-item',
-  imports: [ MatFormFieldModule, MatInputModule, MatSelectModule,],
+  imports: [
+    MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
   templateUrl: './material-item.component.html',
-  styleUrl: './material-item.component.scss'
+  styleUrl: './material-item.component.scss',
+  standalone: true
 })
 export class MaterialItemComponent {
-/*     @Input({required: true}) nome:string = '';
-    @Input() unidade: string = 'm²';
-    @Input() valor: number = 0; */
-    @Input({required: true}) material!: IMaterial;
+  @Input({ required: true }) formGroup!: FormGroup;
+
+  @Output() remover = new EventEmitter<void>();
+
+  onRemover() {
+    console.log("Remover material");
+    this.remover.emit();
+  }
 }
