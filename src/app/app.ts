@@ -8,6 +8,7 @@ import { MateriaisComponent } from './components/materiais/materiais.component';
 import { ProfissionaisComponent } from './components/profissionais/profissionais.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     RouterOutlet,
     MatButtonModule,
     MatTabsModule,
-    MedidasComponent, MateriaisComponent, ProfissionaisComponent
+    MedidasComponent, MateriaisComponent, ProfissionaisComponent, ResultadoComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

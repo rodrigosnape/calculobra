@@ -26,7 +26,7 @@ export class ProfissionaisComponent {
 
         formProfissionais!: FormGroup;
 
-    get profissionaisFormArray(): FormArray<FormGroup> { console.log('profissionaisFormArray()');
+    get profissionaisFormArray(): FormArray<FormGroup> { //console.log('profissionaisFormArray()');
         return this.formProfissionais.get('profissionais') as FormArray<FormGroup>;
     }
 
